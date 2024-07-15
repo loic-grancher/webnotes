@@ -5,12 +5,12 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
     site: "https://loic-grancher.github.io",
-    base: "/docs",
+    base: "/webnotes",
     integrations: [
         starlight({
-            title: "Docs with Tailwind",
+            title: "My very own docs",
             social: {
-                github: "https://github.com/withastro/starlight",
+                github: "https://github.com/loic-grancher",
             },
             sidebar: [
                 {
