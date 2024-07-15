@@ -8,7 +8,7 @@ export default defineConfig({
     base: "/webnotes",
     integrations: [
         starlight({
-            title: "My very own docs",
+            title: "Webdocs",
             social: {
                 github: "https://github.com/loic-grancher",
             },
@@ -23,6 +23,10 @@ export default defineConfig({
                 {
                     label: "Reference",
                     autogenerate: { directory: "reference" },
+                },
+                {
+                    label: "Symfony",
+                    autogenerate: { directory: "symfony" },
                 },
             ],
             customCss: ["/src/tailwind.css"],
