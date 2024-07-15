@@ -13,7 +13,7 @@ export default defineConfig({
                 github: "https://github.com/loic-grancher",
             },
             sidebar: [
-                {
+               /*  {
                     label: "Guides",
                     items: [
                         // Each item here is one entry in the navigation menu.
@@ -23,10 +23,14 @@ export default defineConfig({
                 {
                     label: "Reference",
                     autogenerate: { directory: "reference" },
-                },
+                }, */
                 {
                     label: "Symfony",
                     autogenerate: { directory: "symfony" },
+                },
+                {
+                    label: "Docker",
+                    autogenerate: { directory: "docker" },
                 },
             ],
             customCss: ["/src/tailwind.css"],
