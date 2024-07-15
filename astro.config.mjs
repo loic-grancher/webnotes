@@ -26,11 +26,23 @@ export default defineConfig({
                 }, */
                 {
                     label: "Symfony",
+                    collapsed: true,
                     autogenerate: { directory: "symfony" },
                 },
                 {
                     label: "Docker",
+                    collapsed: true,
                     autogenerate: { directory: "docker" },
+                },
+                {
+                    label: "Vue & Nuxt",
+                    collapsed: true,
+                    autogenerate: { directory: "vue-nuxt" },
+                },
+                {
+                    label: "Git & Github",
+                    collapsed: true,
+                    autogenerate: { directory: "git" }
                 },
             ],
             customCss: ["/src/tailwind.css"],
