@@ -8,7 +8,7 @@ export default defineConfig({
     base: "/webnotes",
     integrations: [
         starlight({
-            title: "Webdocs",
+            title: "📖 Webnotes",
             social: {
                 github: "https://github.com/loic-grancher",
             },
