@@ -44,6 +44,11 @@ export default defineConfig({
                     collapsed: true,
                     autogenerate: { directory: "git" }
                 },
+                {
+                    label: "Wordpress",
+                    collapsed: true,
+                    autogenerate: { directory: "wordpress" }
+                },
             ],
             customCss: ["/src/tailwind.css"],
         }),

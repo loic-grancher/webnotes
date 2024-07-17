@@ -8,15 +8,16 @@ Some things are in English, others are in French depending on what language I le
 ## Current status
 - [x] Symfony
 - [x] Docker
-- [ ] Nuxt / Vue (in progress)
+- [x] Nuxt / Vue 
 - [x] Git (for now)
+- [ ] SQL 
 - [ ] Next / React 
 - [ ] Vim 
-- [ ] SQL
-- [ ] PayloadCMS
 - [ ] Wordpress
+- [ ] PayloadCMS
 - [ ] Linux
 - [ ] LateX
 - [ ] Godot
+- [ ] Laravel
 
 
