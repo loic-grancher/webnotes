@@ -5,6 +5,8 @@ title: Templates
 100% HTML, différent des pattern
 Ils suivent la hierarchie de WP, mais on utilise html au lieu de php. Ils doivent rester minimalistes.
 
+Pour connaître le nom de chaque "code html" (paragraph, headings...), je peux aller voir dans l'affichage "code" de l'éditeur.
+
 Exemple de template index.html
 ```html
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->

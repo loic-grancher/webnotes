@@ -1,7 +1,7 @@
 ---
 title: Creating a child theme
 sidebar:
-    order: 3
+    order: 1
 ---
 It allows to make a new theme that overrides the current theme. In that case, if the parent theme gets updated, the changes won't be canceled. 
 

@@ -2,6 +2,12 @@
 title: Theme.json
 ---
 
+NOTE: pour le développement, il est conseillé d'ajouter le code suivant dans php.config pour éviter les problèmes de cache
+```php
+    define( 'WP_ENVIRONMENT_TYPE', 'development' );
+```
+
+
 Easy JSON edit : https://wpturbo.dev/generators/theme-json/
 
 Dans même répertoire que index.php
