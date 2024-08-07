@@ -3,8 +3,8 @@ title: Actions
 sidebar:
     order: 4
 ---
-It does something: Ex: once you publish a post WP sends an email
-It does not provide with data
+It does something: Ex: once you publish a post WP sends an email.
+It does NOT return any data.
 
 Example of wp actions:
 - after_setup_theme: once the theme is loaded

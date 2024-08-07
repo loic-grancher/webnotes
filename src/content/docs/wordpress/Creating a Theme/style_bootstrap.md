@@ -6,9 +6,9 @@ sidebar:
 
 ## Bootstrap/CSS setup
 
-For more info see "WP actions"
+For more info on "actions" used in the code snippets, see "WP actions"
 
-### Add regular CSS sheet
+### Add a regular CSS sheet
 
 ```php
 //functions.php
@@ -28,7 +28,7 @@ add_action("wp_enqueue_scripts", "montheme_register_assets");
 
 ```
 
-### Register and load the Style of BS
+### Load Bootstrap CSS via CDN
 You could copy-paste the CDN into your header, but this is not good practices.
 We"ll use "register style wp"
 
@@ -49,7 +49,7 @@ wp_enqueue_script allows to define scripts awaiting to be executed
 add_action("wp_enqueue_scripts", "montheme_register_assets");
 
 ```
-### Register and load the JS of BS
+### Load Bootstrap JS via CDN
 
 ```php
 //functions.php

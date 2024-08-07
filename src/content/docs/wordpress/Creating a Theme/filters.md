@@ -7,7 +7,7 @@ sidebar:
  
  A location or spot where a piece of code can interact with another one.
 
-Similar to hooks, but returns a value.
+Similar to actions, but RETURNS a VALUE.
 ```php
 //functions.php
 add_filter("elementToAffect", "functionsToUse");
