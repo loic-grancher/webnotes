@@ -25,19 +25,14 @@ export default defineConfig({
                     autogenerate: { directory: "reference" },
                 }, */
                 {
-                    label: "Symfony",
-                    collapsed: true,
-                    autogenerate: { directory: "symfony" },
-                },
-                {
                     label: "Docker",
                     collapsed: true,
                     autogenerate: { directory: "docker" },
                 },
                 {
-                    label: "Vue & Nuxt",
+                    label: "Git & Github",
                     collapsed: true,
-                    autogenerate: { directory: "vue-nuxt" },
+                    autogenerate: { directory: "git" }
                 },
                 {
                     label: "React & Next",
@@ -45,9 +40,15 @@ export default defineConfig({
                     autogenerate: { directory: "react-next" },
                 },
                 {
-                    label: "Git & Github",
+                    label: "Symfony",
                     collapsed: true,
-                    autogenerate: { directory: "git" }
+                    autogenerate: { directory: "symfony" },
+                },
+                
+                {
+                    label: "Vue & Nuxt",
+                    collapsed: true,
+                    autogenerate: { directory: "vue-nuxt" },
                 },
                 {
                     label: "Wordpress",
