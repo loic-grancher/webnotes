@@ -60,11 +60,21 @@ symfony console doctrine:database:create
 ```bash
 symfony console make:migration
 ```
+Version raccourcie:
+```bash
+symfony console m:m
+```
 
 #### Migrer les migrations en attente
 ```sh
 symfony console doctrine:migrations:migrate
 ```
+Version raccourcie:
+```sh
+symfony console d:m:m
+```
+
+
 
 
 ### Ajouter des fixtures
@@ -76,6 +86,10 @@ symfony composer require orm-fixtures --dev
 #### Charger les fixtures
 ```sh
 symfony console doctrine:fixtures:load
+```
+Version raccourcie:
+```sh
+symfony console d:f:l
 ```
 
 ## Formulaires et Auth
