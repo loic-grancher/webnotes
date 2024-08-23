@@ -35,6 +35,11 @@ export default defineConfig({
                     autogenerate: { directory: "git" }
                 },
                 {
+                    label: "Laravel",
+                    collapsed: true,
+                    autogenerate: { directory: "laravel" }
+                },
+                {
                     label: "React & Next",
                     collapsed: true,
                     autogenerate: { directory: "react-next" },
