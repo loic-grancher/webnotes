@@ -40,6 +40,11 @@ export default defineConfig({
                     autogenerate: { directory: "vue-nuxt" },
                 },
                 {
+                    label: "React & Next",
+                    collapsed: true,
+                    autogenerate: { directory: "react-next" },
+                },
+                {
                     label: "Git & Github",
                     collapsed: true,
                     autogenerate: { directory: "git" }
