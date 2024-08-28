@@ -45,6 +45,11 @@ export default defineConfig({
                     autogenerate: { directory: "react-next" },
                 },
                 {
+                    label: "React Native & Expo",
+                    collapsed: true,
+                    autogenerate: { directory: "react-native" }
+                },
+                {
                     label: "Symfony",
                     collapsed: true,
                     autogenerate: { directory: "symfony" },
