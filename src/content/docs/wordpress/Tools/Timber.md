@@ -4,13 +4,13 @@ title: Timber
 - Moteur de template TWIG
 - Transforme fonctionalités WP en fonctionnalités OOP
 
-## Installation
+# Installation
 Installe twig, cache système de route
 ```sh
  composer require timber/timber
 ```
 
-## Créer un thème avec timber
+# Créer un thème avec timber
 
 Créer:
 /themes/montheme/index.php
@@ -19,29 +19,23 @@ Créer:
 
 Admin wp => activer thème créé
 
-Dans functions.php:
+Dans functions.php, charger timber:
 ```php
 // montheme/functions.php
-<?php 
-$timber = new \Timber\Timber();
-
-// pour éviter de devoir mettre {{ var | raw}}
-\TimberTimber::$autoescape = false
-// Dossier des template, par défaut /templates 
-\TimberTimber::$dirname = ["templates", "views"];
-
+<?php
+require_once __DIR__ . '/vendor/autoload.php';
+// Initialize Timber.
+Timber\Timber::init();
 ```
 
-## Utiliser timber
+# Utiliser timber
 
-Dans une page (ex: index.php), je peux toujours écrire mon code habituel.
-
-Mais je peux aussi:
+Dans une page (ex: index.php), je peux :
 ```php
 // montheme/index.php
-
-// ici $var représente les données envoyées à la vue
-\TimberTimber::render("/pages/index.twig", [$var])
+// ici $context représente les données envoyées à la vue
+use Timber\Timber;
+Timber::render('views/index.twig', $context);
 ```
 
 Je crée un dossier /views/pages/index.twig
@@ -51,15 +45,20 @@ Je peux utiliser les layout dans twig (/views/base.twig), les blocks...
 ```php
 //index.twig
 
+//Utilise un layout de base
 {% extends"base.twig" %}
 
+//crée un block
 {% block body %}
 	//mon contenu
 {% endblock %}
 
+//inclue un autre fichier twig
+{% include "header.twig" %}
+
 ```
 
-## Passer des données statiques
+# Passer des données statiques
 On pourra utiliser la variable `$site` qui contient les infos passées à la vue (`$var`)
 
 D'abord dans ma page php (index.php)
@@ -73,7 +72,7 @@ $context["firstName"] = 'John';
 
 \TimberTimber::render("/pages/index.twig", [$var])
 ```
-## Afficher les données
+# Afficher les données
 note: `function()` allows to use certain wp php functions directly in twig (wp_head...)
 
 ```php
@@ -98,21 +97,23 @@ note: `function()` allows to use certain wp php functions directly in twig (wp_h
 </html>
 ```
 
-## Afficher des données dynamiques
+# Afficher des données dynamiques
 ```php
 
-//On crée le contexte
-$context = Timber::get_context();
-//On récupère nos posts
-$posts = Timber::get_posts([
-	'post_type' => 'character', 
-	'posts_per_page' => 2
-]);
-// On ajoute les posts au contexte
-$context["posts"] = $posts;
+use Timber\Timber;
+$context = Timber::context();
 
-//on envoie à la vue
-Timber::render('index.twig', $context);
+// on définit nos arguments
+$args = [
+	'post_type' => 'post',
+	'posts_per_page' => 5
+];
+
+// On query grace aux arguments et on associe le contenu de la query à l'objet "posts" dans notre contexte
+$context["posts"] = Timber::get_posts($args);
+
+//on envoie le contexte à la vue
+Timber::render('views/index.twig', $context);
 ```
 
 Note : pour `{{ post.content }}`, utiliser `{{ post.content | raw }}` si pas échappé
@@ -132,7 +133,7 @@ Note : pour `{{ post.content }}`, utiliser `{{ post.content | raw }}` si pas éc
 
 ```
 
-## Getting data from ACF (?)
+# Getting data from ACF fields specifically
 PHP
 ```php
 $meta = $post->meta('my_acf_field');
