@@ -8,7 +8,11 @@ export default defineConfig({
     base: "/webnotes",
     integrations: [
         starlight({
-            title: "🦝 Webnotes",
+            title: "Webnotes",
+            logo: {
+                src: './src/assets/webnotes_icon.png',
+              },
+            favicon: './src/assets/webnotes_icon.png',
             social: {
                 github: "https://github.com/loic-grancher",
             },
