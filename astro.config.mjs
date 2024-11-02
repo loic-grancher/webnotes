@@ -54,6 +54,11 @@ export default defineConfig({
                     autogenerate: { directory: "react-native" }
                 },
                 {
+                    label: "SQL",
+                    collapsed: true,
+                    autogenerate: { directory: "SQL" },
+                },
+                {
                     label: "Symfony",
                     collapsed: true,
                     autogenerate: { directory: "symfony" },
