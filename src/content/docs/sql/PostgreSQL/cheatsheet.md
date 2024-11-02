@@ -1,4 +1,6 @@
-# PostgreSQL Commands Cheat Sheet
+---
+title: Cheat Sheet - PostGreSQL
+---
 
 ## Useful Meta-Commands (psql specific)
 

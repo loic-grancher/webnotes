@@ -56,7 +56,7 @@ export default defineConfig({
                 {
                     label: "SQL",
                     collapsed: true,
-                    autogenerate: { directory: "SQL" },
+                    autogenerate: { directory: "sql" },
                 },
                 {
                     label: "Symfony",
